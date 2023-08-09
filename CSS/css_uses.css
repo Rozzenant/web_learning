@@ -1,3 +1,11 @@
 #lorem {
     color:deepskyblue
 }
+
+.news{
+    color: cadetblue;
+}
+
+.news article p{
+    color: darksalmon;
+}
