@@ -1,0 +1,40 @@
+.main-link{
+    color:darksalmon;
+    text-decoration-color: rgb(203, 97, 10);
+}
+
+.main-link:hover{
+    color: lightseagreen;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.main-link:active{
+    color: rgb(28, 117, 113);
+}
+
+/*верно и для ::before, ::first-of-type*/
+.main-link::after{
+    content: attr(class);
+}
+
+#area-name{
+    color: slateblue;
+}
+
+#area-name:focus{
+    color: aqua;
+}
+
+h1.header-main:not(:empty){
+    color: royalblue;
+}
+
+#some-id::after{
+    content: "Some Text";
+}
+
+#some-id::first-letter, .impotant-text::first-letter{
+    font-size: 30px;
+}
+
