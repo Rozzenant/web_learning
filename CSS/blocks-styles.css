@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main-block{
+    background: darksalmon;
+    height: 200px;
+    width: 200px;
+    border: 2px solid darkcyan;
+    border-style: dotted;
+    border-radius: 15px 45px;
+    opacity: 0.5;
+    margin: 50px; /*Внешние отступы*/
+    padding: 20px;
+
+    display: block;
+}
