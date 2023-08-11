@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;500;900&display=swap');
+
+.main-text{
+    color: saddlebrown;
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Sansita Swashed', cursive;
+    text-transform: lowercase;
+    word-spacing: 20px;
+    letter-spacing: 4px;
+    line-height: 25px;
+    text-decoration: underline;
+    cursor: copy;
+}
