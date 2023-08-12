@@ -23,6 +23,7 @@
     background-color: brown;
     color: #fff;
     text-align: center;
+    font-size: 36px;
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -32,14 +33,20 @@
     top: 78%;
 }
 
+body{
+    height: 2000px;
+}
+
 main{
     width: 50%;
     margin-left: 10%;
     background: #fafafa;
     border: 1px solid sienna;
     padding: 20px 2.5%;
+    position: relative;
     float: left;
-    height: 370px
+    height: 370px;
+    z-index: 1;
 }
 
 header, footer{
@@ -53,9 +60,38 @@ header, footer{
     float: left;
 }
 
+nav{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+nav li{
+    display: inline;
+    background: #fafafa;
+    border: 1px solid silver;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+nav li:hover{
+    color: #fff;
+    background: #333;
+    border-radius: 5px;
+    border-color: #333;
+}
+
+nav li:not(:last-of-type){
+    margin-right: 20px;
+}
+
 aside{
     width: 20%;
-    height: 370px;
+    /* height: 370px; */
     padding: 20px 2.5%;
     /* margin-right: 10%; */
     background: #fafafa;
@@ -63,7 +99,9 @@ aside{
     margin-left: 5%;
     float: left;
     position: relative;
-    /* top: -10px; */
+    bottom: -10px;
+    left: -200px;
+    z-index: 0;
 }
 
 footer{
