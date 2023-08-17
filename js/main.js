@@ -37,5 +37,43 @@ switch(str_0){
         console.log("Нет такого значения")
     }
 
-let arr = new Array(1, 0, true, "word"); //или []
+let arr = new Array(1, 0, true, "word", false); //или []
+console.log(arr); //arr[2]
+console.log(arr.length);
 
+let arr2d = new Array(new Array(1, 2, 3), new Array(4, 5, 6), new Array(7, 8, 9)); //[[], [], []]
+console.log("Элемент [1][1]: " + arr2d[1][1]);
+arr2d[1][1] = 100;
+
+console.log("Начало циклов");
+for(let i=0; i < 4; i++){
+    console.log(i);
+}
+
+for(let i=100; i > 1; i /= 2){
+    console.log(i);
+}
+
+
+let j = 10;
+while(j > 0){
+    if (j % 3 == 0){
+        console.log(j);
+    }
+    j--;
+}
+let k = 20;
+do{
+    if(k % 3 > 0){
+        console.log(k)
+        // break;
+        // continue;
+    }
+    k--;
+} while(k > 10);
+
+console.log("Конец циклов");
+
+for(let el in arr){ //for(let i = 0; i < arr.length; i++)
+    console.log(arr[el]);
+}
