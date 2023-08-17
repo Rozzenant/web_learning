@@ -77,3 +77,73 @@ console.log("Конец циклов");
 for(let el in arr){ //for(let i = 0; i < arr.length; i++)
     console.log(arr[el]);
 }
+
+// alert("Будьте осторожны!");
+// let agree_bool = confirm("Вы сейчас дома?");
+// console.warn(agree_bool);
+
+// let age = prompt("Сколько Вам лет?", 18);
+
+// функции
+
+function about(name){
+    console.log("Привет " + name);
+}
+
+about("Мир!");
+
+function sum_arr(arr){
+    let sum = 0;
+    for(i in arr){
+        sum+=arr[i];
+    }
+    return sum;
+}
+
+
+let arr1 = [1,2,3,4,5];
+console.log("сумма: " + sum_arr(arr1));
+
+let counter = 0;
+function onClickButton(element){
+    counter++;
+    // console.log(element.id);
+
+    element.innerHTML = "Счетчик: " + counter;
+
+    element.style.background = "white";
+    element.style.color = "blue";
+
+    element.style.cssText = "border-radius: 5px; border: 0; font-size: 24px";
+}
+
+function onInput(el){
+    console.log(el.value);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
