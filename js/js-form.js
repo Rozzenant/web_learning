@@ -28,3 +28,21 @@ function checkForm(event){
 
     return false;
 }
+
+// setInterval(timer_reg, 1000);
+let counter = 0;
+let timer = document.getElementById('main-timer');
+
+// function timer_reg(){
+//     counter++;
+//     timer.innerHTML = counter + " секунд(ы) прошло";
+// }
+
+setInterval(function(){
+    counter++;
+    timer.innerHTML = counter + " секунд(ы) прошло(и)";
+}, 1000)
+
+setTimeout(function() {
+    console.log("Прошло 5 секунд.");
+}, 5000)
