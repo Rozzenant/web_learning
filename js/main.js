@@ -132,7 +132,12 @@ for(let i = 0; i < spans.length; i++){
     spans[i].innerHTML = "span_" + (i**10);
 }
 
+let spans_0 = document.getElementsByClassName('span-text');
 
+
+for(let i = 0; i < spans_0.length; i++){
+    console.log(i + " " + spans_0[i].innerHTML);
+}
 
 
 
