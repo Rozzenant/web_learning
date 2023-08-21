@@ -46,3 +46,33 @@ setInterval(function(){
 setTimeout(function() {
     console.log("Прошло 5 секунд.");
 }, 5000)
+
+date_div = document.getElementById("date");
+date_div.innerHTML = new Date();
+
+let arr = [1, 5, 2, 34, -9];
+log = document.getElementById("log");
+// log.innerHTML = arr.join(" ")
+log.innerHTML = arr.sort((a, b) => a - b);
+// arr.reverse();
+// log.innerHTML = arr.join(", ");
+arr_str = arr.join(", ");
+console.log(arr_str);
+console.log(arr_str.split(", ").map((x) => parseInt(x)));
+
+
+class Person{
+    constructor(name, age, happiness){
+        this.name = name;
+        this.age = age;
+        this.happiness = happiness;
+    }
+
+    info() {
+        console.log(this.name + " " + this.age + " лет счастлив: " + this.happiness);
+    }
+}
+
+let Alex = new Person("Alex", 25, true);
+Alex.info();
+
