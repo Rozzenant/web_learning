@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #fff;
+    height: 250vh;
+}
+
+.parent {
+    margin-top: 50px;
+    margin-left: 10%;
+    width: 80%;
+    padding: 50px;
+    background: #CDCDFF;
+    position: relative; 
+    /* relative (все, кроме static) нужен родителю, чтобы позиционировать absolute (block-2) у дочерних элементов, иначе блок будет позиционироваться относительно всей страницы, т.к. ни у одного родителя нет relative */
+    height: 150vh;
+}
+
+.block {
+    width: 100%;
+    padding: 50px;
+}
+
+.block1 {
+    background: #88BBEF;
+    /* position: relative;
+    top: 50px; 
+    margin-top: 50px; */
+    /* Блок-1 наезжает на блок-2, отталкивается сверху. margin сдвигает все блоки */
+}
+
+.block2 {
+    background: #c579f1;
+    position: absolute;
+    width: unset;
+    /* absolute ищет первого родителя */
+    /* bottom: 0;
+    right: 0; */
+
+    /* Отцентрировать блок относительно родителя */
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+
+.block3 {
+    background: #E8EF96;
+    position: fixed;
+    /* block-3 всегда будет находится в одном фиксированном месте */
+    bottom: 0;
+    left: 0;
+}
+
+.block4 {
+    background: #B5EFB2;
+    position: sticky;
+    top: 0;
+    /* block-4 всегда будет внутри родителя */
+}
+
+.block5 {
+    background: #FF6961;
+}
+
+.small-block {
+    background: #ef8888;
+    font-size: 16px;
+    position: absolute;
+    top: 25%;
+    left: 17.9px;
+}
