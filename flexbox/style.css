@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    border: 10px solid #905ac7;
+    /* flex-wrap: wrap; */
+    /* height: 100vh; */
+    /* flex-direction: column; */
+    /* padding: 5px; */
+    /* gap: 15px; */
+
+    min-height: 100vh;
+    /* flex-direction: row-reverse; */
+    /* Обратный порядок блоков */
+    /* flex-direction: column; */
+    /* порядок сверху вних */
+    /* flex-direction: column-reverse; */
+    /* порядок снизу вверх */
+
+    flex-flow: row wrap;
+    /* justify-content: center; распределяет items ровно по центу контейнера на main оси*/
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    justify-content: center; /* по main оси */
+    align-items: center; /* по cross оси */
+    /* Разместит items в начале контейнера, по-умолчанию item растягивается на всю ширину контейнера, если не указано иное;
+    baseline размещает items по серединной линии относительно текста в items */
+  }
+
+.flex-item {
+    padding: 10px;
+    font: 900 60px "Helvetica", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 3.8px 2px 0 rgba(0, 0, 0, 0.2);
+    /* flex: 1; */
+    width: 150px;
+    /* Не переносятся на след. ряд, т.к. занимают всю доступную ширину и != 200 px */
+    /* width: calc(33.33% - 10px); */
+    /* если указать в %, то можно убрать пустые пространства справа */
+    /* margin: 5px; */
+}
+
+.item-1 {
+    background-image: linear-gradient(45deg, #ff8177, #cf556c);
+  }
+
+.item-2 {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+}
+
+.item-3 {
+    background: linear-gradient(45deg, #a6c0fe, #f68084);
+}
+
+.item-4 {
+    background: linear-gradient(45deg, #d4fc79, #96e6a1);
+}
+
+.item-5 {
+    background: linear-gradient(45deg, #43e97b, #38f9d7);
+}
+
+.item-6 {
+    background: linear-gradient(45deg, #a18cd1, #fbc2eb);
+}
+
+.item-7 {
+    background: linear-gradient(45deg, #c3c8dd, #9790d1, #a49fc4);
+}
+
+.item-8 {
+    background: linear-gradient(45deg, #e1eec3, #f05053);
+}
+
+@media screen and (max-width: 650px) {
+    .flex-container{
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .flex-item{
+        /* flex: 1; */
+        width: 50%;
+        height: 25%;
+    }
+}
+
+.item-1:hover{
+    background-image: linear-gradient(45deg, #f7b5af, #d38997);
+}
+
+.item-1:active{
+    background-image: linear-gradient(45deg, #9b5e58, #9c5461);
+}
+
+.item-2 {
+    font-size: 150px;
+}
+
+.item-3 {
+    font-size: 30px;
+    width: 50px;
+}
+
+.item-4 {
+    font-size: 100px;
+}
+
