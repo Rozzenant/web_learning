@@ -13,7 +13,7 @@
     /* padding: 5px; */
     /* gap: 15px; */
 
-    min-height: 100vh;
+    /* min-height: 100vh; */
     /* flex-direction: row-reverse; */
     /* Обратный порядок блоков */
     /* flex-direction: column; */
@@ -21,14 +21,19 @@
     /* flex-direction: column-reverse; */
     /* порядок снизу вверх */
 
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     /* justify-content: center; распределяет items ровно по центу контейнера на main оси*/
     /* justify-content: space-between; */
-    /* justify-content: space-evenly; */
-    justify-content: center; /* по main оси */
-    align-items: center; /* по cross оси */
+    /* justify-content: center; */
+    /* justify-content: center;  */
+    /* по main оси */ 
+    /* align-items: center;  */
+    /* по cross оси */
     /* Разместит items в начале контейнера, по-умолчанию item растягивается на всю ширину контейнера, если не указано иное;
     baseline размещает items по серединной линии относительно текста в items */
+    /* align-content: center; */
+    /* align-content отвечает за расположение пространства рядов, тогда как align-items за расположение самих items */
+
   }
 
 .flex-item {
@@ -37,32 +42,62 @@
     color: #fff;
     text-align: center;
     text-shadow: 3.8px 2px 0 rgba(0, 0, 0, 0.2);
-    /* flex: 1; */
-    width: 150px;
+    flex: 1;
+    /* width: 300px; */
     /* Не переносятся на след. ряд, т.к. занимают всю доступную ширину и != 200 px */
     /* width: calc(33.33% - 10px); */
     /* если указать в %, то можно убрать пустые пространства справа */
     /* margin: 5px; */
+    /* width: 33.33%; */
+    /* flex-grow: 1; */
+    /* все итемы равномерно займут все пространство */
+    /* flex-basis: 33.33%; */
 }
 
 .item-1 {
     background-image: linear-gradient(45deg, #ff8177, #cf556c);
+    /* align-self: stretch; */
+    /* flex-basis: 400px; */
+    /* Свойство flex-basis указывает на размер элемента до того, как свободное место будет распределено flex-grow */
+    /* flex: 1 2 50px; */
+    /* grow, shrink, base */
   }
 
 .item-2 {
+    display: flex;
+    justify-content: center;
     background: linear-gradient(45deg, #84fab0, #8fd3f4);
+    flex-flow: row wrap;
+    
+    /* align-self: center; */
+    /* flex-shrink: 2; */
+    /* flex-grow:2 1:2:1 распределение пространства */
+    /* flex-shrink: 2 отдает пространство при уменьшении ширины страницы для row*/
+    /* flex-grow: 1; */
+    /* flex: 5 1 150px; */
+    /* order: -2; */
+    /* justify-content: flex-end; */
 }
 
 .item-3 {
     background: linear-gradient(45deg, #a6c0fe, #f68084);
+    /* align-self: flex-end; */
+    /* flex-shrink: 3; */
+    /* flex-basis: 100px; */
+    /* flex-grow: 1; */
+    /* order: -1; */
+    /* -1 (-2, -3 приоритетнее) в начало, 0 - по-умолчанию, 1 - после всех элементов */
 }
 
 .item-4 {
     background: linear-gradient(45deg, #d4fc79, #96e6a1);
+    /* align-self: baseline; */
 }
 
 .item-5 {
     background: linear-gradient(45deg, #43e97b, #38f9d7);
+    /* font-size: 128px;
+    align-self: baseline; */
 }
 
 .item-6 {
@@ -77,16 +112,28 @@
     background: linear-gradient(45deg, #e1eec3, #f05053);
 }
 
+.inner-flex-1 {
+    background: linear-gradient(45deg, #f05053, #f08ede);  
+    flex-grow: 1;
+}
+
+.inner-flex-2 {
+    background: linear-gradient(45deg, #6550f0, #9695dd);
+    flex-grow: 1;
+}
+
 @media screen and (max-width: 650px) {
     .flex-container{
-        flex-direction: row;
-        gap: 0;
+        flex-flow: column wrap;
+        /* gap: 0; */
     }
 
     .flex-item{
-        /* flex: 1; */
-        width: 50%;
-        height: 25%;
+        flex: 1;
+    }
+
+    .item-1{
+        order: -3;
     }
 }
 
@@ -98,7 +145,7 @@
     background-image: linear-gradient(45deg, #9b5e58, #9c5461);
 }
 
-.item-2 {
+/* .item-2 {
     font-size: 150px;
 }
 
@@ -109,5 +156,5 @@
 
 .item-4 {
     font-size: 100px;
-}
+} */
 
