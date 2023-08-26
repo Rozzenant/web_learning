@@ -1,0 +1,42 @@
+html {
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+/* html {
+    background-color: red; 
+    /* приоритетнее 
+  }
+  
+  * {
+    background-color: blue;
+  } */
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #63c9b4, #ffef78, #eb92be);
+    font-family: 'Dosis', sans-serif;
+    font-weight: 600;
+    font-display: swap;
+    height: inherit;
+}
+
+.wrapper {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px); 
+    /* -webkit- для поддержки эксперементальных свойств, когда реализовано,   то он не требуется */
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.01);
+}
