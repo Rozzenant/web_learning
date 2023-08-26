@@ -1,0 +1,36 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+.flex-item {
+    padding: 10px;
+    font: 900 60px "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    text-shadow: 4px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Base styles */
+.flex-container {
+    background: linear-gradient(45deg, #84fab0, #8fd3f4);
+    padding: 1em;
+  }
+  
+p {
+    color: #fff;
+    font: 200 18px "Roboto", sans-serif;
+  }
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse nowrap;
+    gap: 1em;
+}
+
+.content {
+    flex: 1;
+}
