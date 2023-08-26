@@ -29,14 +29,103 @@ body {
     font-weight: 600;
     font-display: swap;
     height: inherit;
+    width: inherit;
 }
 
 .wrapper {
-    backdrop-filter: blur(5.5px);
-    -webkit-backdrop-filter: blur(5.5px); 
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); 
     /* -webkit- для поддержки эксперементальных свойств, когда реализовано,   то он не требуется */
-    background-color: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.01);
+    /* background-color: rgba(255, 255, 255, 0.75); */
+    border: 1px solid rgba(255, 255, 255, 0.34);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.01);
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.15);
+    color: #232323;
+    background: rgba(198, 198, 198, 0.31);
+    flex-basis: 400px;
+    height: 540px;
+    padding: 20px 35px;
+}
+
+.screen {
+   backdrop-filter: blur(5.5px); 
+   -webkit-backdrop-filter: blur(5.5px);
+   background: rgba(255, 255, 255, 0.75);
+   border: 1px solid rgba(255, 255, 255, 0.01);
+   border-radius: 16px;
+   box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+   font-size: 36px;
+   overflow: auto;
+   padding: 20px;
+   margin-top: 10px;
+   text-align: right;
+   width: 326px;
+}
+
+.calc-button-row {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin: 5% 0;
+
+}
+
+.calc-button {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(35, 35, 35, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color:#232323;
+    /* flex-basis: 23%; */
+    flex: 1;
+    font-family: inherit;
+    font-size: 24px;
+    height: 65px;
+}
+
+.calc-button:last-child {
+    color:#232323;
+    background: #ea9800;
+}
+
+.calc-button:last-child:hover {
+    background-color: rgba(255, 153, 0, 0.34);
+    color: inherit;
+}
+
+.calc-button:hover {
+    background-color: rgba(248, 248, 248, 0.34);
+}
+
+.calc-button:active {
+    background-color: #ffef78;
+}
+
+.calc-button:last-child:active {
+    background-color: #ffef78;
+}
+
+.double {
+    /* flex-grow: 2; */
+    flex-basis: 160px;
+}
+
+.delete {
+    /* flex-grow: 1; */
+    flex-basis: 75px;
+}
+
+.divide {
+    /* flex-grow: 1; */
+    flex-basis: 75px;
+}
+
+.triple {
+    flex-basis: 245px;
+}
+
+.equals {
+    flex-basis: 75px;
 }
