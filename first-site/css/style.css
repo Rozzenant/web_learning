@@ -85,9 +85,16 @@ body {
     height: 65px;
 }
 
+.center-math {
+    transform: translate(-0.5px, -4px);
+}
+
 .calc-button:last-child {
     color:#232323;
     background: #ea9800;
+    font-size: 48px;
+
+
 }
 
 .calc-button:last-child:hover {
